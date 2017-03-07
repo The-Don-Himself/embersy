@@ -1,0 +1,19 @@
+<form {{action "login" on="submit"}} class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>Login Form</legend>
+
+        <label for="identification">Email</label>
+        <input id="identification" name="identification" type="text" placeholder="Email or Username">
+        <span class="pure-form-message">This is a required field.</span>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Password">
+        <span class="pure-form-message">This is a required field.</span>
+
+        <label for="remember" class="pure-checkbox">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="pure-button pure-button-primary">Sign In</button>
+    </fieldset>
+</form>

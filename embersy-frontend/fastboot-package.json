@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "main": "server.js",
+  "description": "Small description for frontend goes here",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node server.js --use_strict"
+  },
+  "dependencies": {
+    "fastboot-app-server": "latest"
+  },
+  "repository": "",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Campus Discounts",
+  "license": "MIT"
+}

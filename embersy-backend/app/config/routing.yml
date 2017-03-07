@@ -1,0 +1,58 @@
+#HWIOAuthBundle routes
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix: /login
+
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix: /login
+
+hwi_oauth_security:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix: /login
+
+#FosUserBundle Routes
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /api/resetting
+
+#FosOauthBundle Routes
+fos_oauth_server_token:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
+
+fos_oauth_server_authorize:
+    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"
+
+facebook_login:
+    path: /login/check-facebook
+
+google_login:
+    path: /login/check-google
+
+twitter_login:
+    path: /login/check-twitter
+
+yahoo_login:
+    path: /login/check-yahoo
+
+slack_login:
+    path: /login/check-slack
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/doc
+
+redirect_trailing_slash:
+    path: /{url}
+    defaults: { _controller: AppBundle:Redirect:removeTrailingSlash }
+    requirements:
+        url: .*/$
+    methods: [GET , POST]

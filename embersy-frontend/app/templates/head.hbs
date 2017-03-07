@@ -1,0 +1,54 @@
+{{!-- 
+  Add content you wish automatically added to the documents head
+  here. The 'model' available in this template can be populated by
+  setting values on the 'head-data' service. 
+--}}
+
+<title itemprop='name'>{{ if model.title model.title 'Embersy' }}</title>
+<meta name="robots" content="{{ if model.robotsIndex model.robotsIndex 'index' }},{{ if model.robotsFollow model.robotsFollow 'follow' }}" >
+<meta name="title" content="{{ if model.title model.title 'Embersy' }}" >
+<meta name="description" content="{{ if model.description model.description 'Your nifty kickstart package for building ambitious web apps' }}" >
+<meta name="keywords" content="{{ if model.keywords model.keywords 'embersy,ember,symfony' }}" >
+<meta property="og:title" content="{{ if model.title model.title 'Embersy' }}" >
+<meta property="og:site_name" content="Embersy" >
+<meta property="og:description" content="{{ if model.description model.description 'Your nifty kickstart package for building ambitious web apps' }}" >
+<meta property="og:image" content="/{{ if model.image model.image 'background.jpg' }}" >
+<meta property="og:image:url" content="/{{ if model.image model.image 'background.jpg' }}" >
+<meta property="og:image:type" content="{{ if model.imageType model.imageType 'image/jpeg' }}" >
+<meta property="og:image:width" content="{{ if model.imageWidth model.imageWidth '1200' }}" >
+<meta property="og:image:height" content="{{ if model.imageHeight model.imageHeight '797' }}" >
+<meta itemprop="name" content="{{ if model.title model.title 'Embersy' }}">
+<meta itemprop="description" content="{{ if model.description model.description 'Your nifty kickstart package for building ambitious web apps' }}">
+<meta itemprop="image" content="/{{ if model.image model.image 'background.jpg' }}">
+
+<meta name="twitter:app:name:googleplay" content="Embersy">
+<meta name="twitter:app:id:googleplay" content="com.embersy.app">
+
+{{#if model.home}}
+	<meta property="og:url" content="https://embersy.com/" >
+	<link rel="canonical" href="https://embersy.com/" itemprop="url">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Embersy">
+	<meta name="twitter:creator" content="@Embersy">
+	<meta name="twitter:title" content="Welcome To Embersy">
+	<meta name="twitter:description" content="Your nifty kickstart package for building ambitious web apps.">
+	<meta name="twitter:image" content="/background.jpg">
+{{/if}}
+
+{{#if model.register}}
+	<meta property="og:url" content="https://embersy.com/register" >
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Embersy">
+	<meta name="twitter:creator" content="@Embersy">
+	<meta name="twitter:title" content="Join Us... It's FREE!!!">
+	<meta name="twitter:description" content="Your nifty kickstart package for building ambitious web apps.">
+	<meta name="twitter:image" content="/background.jpg">
+{{/if}}
+
+{{#if model.profile}}
+	<meta property="og:type" content="profile" >
+	<meta property="og:url" content="https://embersy.com/users/{{ model.profile.id }}" >
+	<meta property="profile:first_name" content="{{ model.profile.firstname }}">
+	<meta property="profile:last_name" content="{{ model.profile.lastname }}">
+	<meta property="profile:username" content="{{ model.profile.user.username }}">
+{{/if}}

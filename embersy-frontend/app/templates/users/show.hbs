@@ -1,0 +1,29 @@
+<div class="posts">
+    <h1 class="content-subhead">{{link-to 'Users List' 'users.index'}} / {{link-to (concat '@' model.user.username) 'users.show' model}}</h1>
+
+    <!-- A single blog post -->
+    <section class="post">
+        <header class="post-header">
+            {{#link-to 'users.show' model}}
+                <img width="48" height="48" alt="Avatar" class="post-avatar" src="/img/avatar.png"/>
+            {{/link-to}}
+
+            {{#link-to 'users.show' model}}
+                <h2 class="post-title">@{{ model.user.username }}</h2>
+            {{/link-to}}
+
+            <p class="post-meta">
+                {{#link-to 'users.show' model}}
+                    {{ model.firstname }} {{ model.lastname }}
+                {{/link-to}}
+            </p>
+        </header>
+
+        <div class="post-description">
+            <p>
+                About Me : 
+            </p>
+        </div>
+    </section>
+
+</div>

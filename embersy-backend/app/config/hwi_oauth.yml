@@ -1,0 +1,78 @@
+# Social Login Authentication Bundle
+hwi_oauth:
+    connect:
+        account_connector: my_user_provider
+
+    # list of firewall names the oauth bundle is active in
+    firewall_names: 
+        - 'api'
+
+    # optional target_path_parameter to provide an explicit return URL
+    #target_path_parameter: _destination
+
+    # use referer as fallback to determine default return URL
+    use_referer: true
+
+    http_client:
+        timeout:       10
+        verify_peer:   false
+        ignore_errors: true
+        max_redirects: 5
+    fosub:
+        username_iterations: 30
+        properties:
+            facebook: facebook_id
+            google: google_id
+            twitter: twitter_id
+            yahoo: yahoo_id
+            slack: slack_id
+    resource_owners:
+        facebook:
+            type:                facebook
+            client_id:           "%facebook_app_id%"
+            client_secret:       "%facebook_app_secret%"
+            scope:               "email, user_friends, public_profile, user_birthday, user_actions:campus-discounts, pages_show_list"
+            options:
+                auth_type: rerequest 
+            authorization_url:   "https://www.facebook.com/v2.5/dialog/oauth"
+            access_token_url:    "https://graph.facebook.com/v2.5/oauth/access_token"
+            revoke_token_url:    "https://graph.facebook.com/v2.5/me/permissions"
+            infos_url:           "https://graph.facebook.com/me?fields=id,name,first_name,last_name,gender,email,picture.type(large)"
+            paths:
+                firstname:       first_name
+                lastname:        last_name
+                gender:          gender
+                email:           email
+                profilepicture:  picture.data.url
+        google:
+            type:                google
+            client_id:           "%google_app_id%"
+            client_secret:       "%google_app_secret%"
+            scope:               "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.google.com/m8/feeds/"
+            paths:
+                firstname:       given_name
+                lastname:        family_name
+                gender:          gender
+                email:           email
+                profilepicture:  picture
+        twitter:
+            type:                twitter
+            client_id:           "%twitter_app_id%"
+            client_secret:       "%twitter_app_secret%"
+            scope:               "r_basicprofile,r_emailaddress"
+            infos_url:           "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"
+            paths:
+                firstname:       firstName
+                lastname:        lastName
+                gender:          gender
+                email:           email
+                profilepicture:  picture
+        yahoo:
+            type:                yahoo
+            client_id:           "%yahoo_app_id%"
+            client_secret:       "%yahoo_app_secret%"
+        slack:
+            type:                slack
+            client_id:           "%slack_app_id%"
+            client_secret:       "%slack_app_secret%"
+            scope:               "identify,incoming-webhook,commands,bot,users:read"

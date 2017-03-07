@@ -1,0 +1,32 @@
+<!-- A wrapper for all the blog posts -->
+<div class="posts">
+    <h1 class="content-subhead">{{link-to 'Users List' 'users.index'}}</h1>
+
+    {{#each model as |profile|}}
+        <!-- A single blog post -->
+        <section class="post">
+            <header class="post-header">
+                {{#link-to 'users.show' profile}}
+                    <img width="48" height="48" alt="Avatar" class="post-avatar" src="/img/avatar.png"/>
+                {{/link-to}}
+
+                {{#link-to 'users.show' profile}}
+                    <h2 class="post-title">@{{ profile.user.username }}</h2>
+                {{/link-to}}
+
+                <p class="post-meta">
+                    {{#link-to 'users.show' profile}}
+                        {{ profile.firstname }} {{ profile.lastname }}
+                    {{/link-to}}
+                </p>
+            </header>
+
+            <div class="post-description">
+                <p>
+                    About Me : 
+                </p>
+            </div>
+        </section>
+    {{/each}}
+
+</div>

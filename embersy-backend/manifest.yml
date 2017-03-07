@@ -1,0 +1,16 @@
+---
+applications:
+ - name: Ember Symfony Backend
+   random-route: true
+   memory: 128M
+   instances: 1
+   disk_quota: 1024M
+   env:
+     #BP_DEBUG: true
+     SYMFONY_ENV: prod
+     PHP_INI_SCAN_DIR: .bp-config/php/conf.d
+     MYSQL_HOST: us-cdbr-iron-east-04.cleardb.net
+     MYSQL_PORT: 3306
+     MYSQL_USERNAME: bcfeb9f70d0843
+     MYSQL_PASSWORD: 80c92179
+     MYSQL_DB_NAME: ad_b842264bf26f87b

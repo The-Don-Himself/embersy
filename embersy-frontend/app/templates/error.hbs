@@ -1,0 +1,37 @@
+{{#if (compare model.errors.[0].status '>=' 500) }}
+    <div>
+        <div style="display: flex; flex-direction: column; width: 100%; min-height: 60vh; justify-content: center; align-items: center;">
+            <h1>
+                {{ model.errors.[0].status }} - Error
+            </h1>
+            <p>
+                We are sorry, our servers seem to be having a problem right now, please try again later.
+            </p>
+            <h2>Specific Details : The server returned a "{{ model.errors.[0].status }} {{ model.errors.[0].detail }}".</h2>
+        </div>
+    </div>
+{{else if (compare model.errors.[0].status '>=' 400) }}
+    <div>
+        <div style="display: flex; flex-direction: column; width: 100%; min-height: 60vh; justify-content: center; align-items: center;">
+            <h1>
+                {{ model.errors.[0].status }} - Error
+            </h1>
+            <p>
+                Our servers.
+            </p>
+            <h2>Specific Details : The server returned a "{{ model.errors.[0].status }} {{ model.errors.[0].detail }}".</h2>
+        </div>
+    </div>
+{{else}}
+    <div>
+        <div style="display: flex; flex-direction: column; width: 100%; min-height: 60vh; justify-content: center; align-items: center;">
+            <h1>
+                {{ model.errors.[0].status }} - Error
+            </h1>
+            <p>
+                Sorry, we seem to have a problem processing your request, please check your connection then refresh the page.
+            </p>
+            <h2>Specific Details : The server returned a "{{ model.errors.[0].status }} {{ model.errors.[0].detail }}".</h2>
+        </div>
+    </div>
+{{/if}}

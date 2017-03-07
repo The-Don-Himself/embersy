@@ -1,0 +1,36 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host: 127.0.0.1
+    env(MYSQL_HOST): 127.0.0.1
+    database_port: null
+    env(MYSQL_PORT): 3306
+    database_name: symfony
+    database_user: root
+    env(MYSQL_USER): bcfeb9f70d0843
+    database_password: null
+    env(MYSQL_PASSWORD): 80c92179
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: cd208a1eab0c335b22f4ab3f6ba2d2c379de47ee
+    client_id: 1_4w0fuf92dvs408kwowok04s008c04ws08k4wcsggk4ok04w0kk
+    client_secret: 5k17q2cbuswskkksk00ckcw4g44o4ooo48gwgs40sgk8gcogsg
+    facebook_app_id: 'put_facebook_app_id_here'
+    facebook_app_secret: put_facebook_app_secret_here
+    google_app_id: ' '
+    google_app_secret: ' '
+    twitter_app_id: ' '
+    twitter_app_secret: ' '
+    yahoo_app_id: ' '
+    yahoo_app_secret: ' '
+    slack_app_id: ' '
+    slack_app_secret: ' '
+    social_login_accounts:
+        facebook: facebook_id
+        google: google_id
+        twitter: twitter
+        yahoo: yahoo_id
+        slack: slack_id

@@ -1,0 +1,60 @@
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver:         pdo_mysql
+                host:           '%env(MYSQL_HOST)%'
+                port:           '%env(MYSQL_PORT)%'
+                dbname:         "%database_name%"
+                user:           '%env(MYSQL_USER)%'
+                password:       '%env(MYSQL_PASSWORD)%'
+                charset:        utf8mb4
+                # The version of your MariaDB server
+                server_version: 10.1.20
+                default_table_options:
+                    charset:    utf8mb4
+                    collate:    utf8mb4_unicode_ci
+                    engine:     InnoDB
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                auto_mapping: true
+                naming_strategy: doctrine.orm.naming_strategy.underscore
+                second_level_cache:
+                    region_cache_driver: array
+#If you ever need a cache backed by Redis in Cluster Mode or Master-Slave there's a bundle SncRedisBundle
+#                        type:         service
+#                        id:           snc_redis.cache
+                    region_lock_lifetime: 60
+                    log_enabled:        "%kernel.debug%"
+                    # 1 hour cache lifetime use with extreme care! You should reduce if unsure.
+                    region_lifetime:    3600
+                    enabled:            true
+                mappings:
+                    AppBundle: ~
+                    FOSUserBundle: ~
+
+#If you install Doctrine MongoDB Bundle
+#doctrine_mongodb:
+#    connections:
+#        default:
+#            server: mongodb://localhost:27017
+#            options: {}
+#    default_database: symfony_mongodb
+#    document_managers:
+#        default:
+#            auto_mapping: true
+#            mappings:
+#                AppBundle: ~
+
+# If you install Doctrine Migrations Bundle
+#doctrine_migrations:
+#    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+#    namespace: Application\Migrations
+#    table_name: migration_versions
+#    name: Application Migrations

@@ -1,0 +1,11 @@
+<div>
+    <div style="display: flex; flex-direction: column; width: 100%; min-height: 60vh; justify-content: center; align-items: center;">
+        <h1>
+            {{ model.errors.[0].status }} - Error
+        </h1>
+        <p>
+            Our servers.
+        </p>
+        <h2>Specific Details : The server returned a "{{ model.errors.[0].status }} {{ model.errors.[0].detail }}".</h2>
+    </div>
+</div>

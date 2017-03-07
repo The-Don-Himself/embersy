@@ -1,0 +1,5 @@
+---
+applications:
+ - name: "Symfony Ember Frontend"
+   random-route: true
+   memory: 256M

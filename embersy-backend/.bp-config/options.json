@@ -1,0 +1,8 @@
+{
+  "PHP_VERSION": "{PHP_70_LATEST}",
+  "WEBDIR": "web",
+  "COMPOSER_INSTALL_OPTIONS": ["--no-scripts"],
+  "COMPOSER_VENDOR_DIR": "vendor",
+  "PHP_EXTENSIONS": ["apcu", "mbstring", "mcrypt", "pdo", "pdo_mysql", "sockets", "zip", "zlib"],
+  "ZEND_EXTENSIONS": ["opcache"]
+}
