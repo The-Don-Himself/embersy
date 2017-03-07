@@ -12,13 +12,13 @@ Embersy is the same package powering [Campus Discounts](https://campus-discounts
 Ember.js is a framework for creating ambitious web applications
 
 ### Why Ember?
-Blog Post coming soon....
+Ember is used on many popular websites, including Discourse, Groupon, LinkedIn, Vine, Live Nation, Nordstrom, Twitch.tv and Chipotle. Although primarily considered a framework for the web, it is also possible to build desktop and mobile applications in Ember. The most notable example of an Ember desktop application is Apple Music, a feature of the iTunes desktop application. [Source](https://en.wikipedia.org/wiki/Ember.js)
 
 ### What is [Symfony](http://symfony.com/)?
 Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and a Community — all working together in harmony.
 
 ### Why Symfony?
-Blog Post coming soon....
+Symfony is used by the open-source Q&A service Askeet and many more applications, including Delicious. At one time it was used for 20 million users of Yahoo! Bookmarks. As of February 2009, Dailymotion.com has ported part of its code to use Symfony, and is continuing the transition. Symfony is used by OpenSky, a social shopping platform, and by the massively multiplayer online browser game eRepublik, as well as by content management framework eZ Publish in version 5. Drupal 8, phpBB and a number of other large applications have incorporated components of Symfony. Symfony2 is also used by Meetic, one of the largest online dating platforms in the world, on most of its websites for implementing its business logic in the backend. Symfony components are also used in other web application frameworks including Laravel, Silex, and Drupal. As of February 12, 2013 the massive wiki-database video game website GiantBomb.com converted from Django to Symfony following an acquisition. [Source](https://en.wikipedia.org/wiki/Symfony)
 
 ### Features
 
