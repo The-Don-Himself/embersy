@@ -1,9 +1,13 @@
 # Embersy
 #### Embersy is your nifty kickstart package for building ambitious web apps. It comprises of an EmberJs 2.x frontend with a Symfony 3.x powered backend both latest versions and preconfigured to be production ready. 
 
-### LIVE DEMO (Database purged periodically)
-Ember Frontend: [https://embersy-frontend2.mybluemix.net](https://embersy-frontend2.mybluemix.net)
-Symfony Backend: [https://embersy-backend2.mybluemix.net](https://embersy-backend2.mybluemix.net)
+~~### LIVE DEMO (Database purged periodically)~~
+~~Ember Frontend: [https://embersy-frontend2.mybluemix.net](https://embersy-frontend2.mybluemix.net)~~
+~~Symfony Backend: [https://embersy-backend2.mybluemix.net](https://embersy-backend2.mybluemix.net)~~
+
+
+![Image](embersy.png?raw=true "EmberSy Screenshot")
+
 
 ### Production Use
 Embersy is the same package powering [Campus Discounts](https://campus-discounts.com/) as such we have an active interest in maintaining it, that said pull requests are most welcome .
