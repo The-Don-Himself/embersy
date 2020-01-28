@@ -1,3 +1,6 @@
+# Deprecated in favour of improved and up-to-date kickstart package [EmberSy Fire](https://github.com/The-Don-Himself/Embersy-Fire) please use this one instead, thank you!
+
+
 # Embersy
 #### Embersy is your nifty kickstart package for building ambitious web apps. It comprises of an EmberJs 2.x frontend with a Symfony 3.x powered backend both latest versions and preconfigured to be production ready. 
 
